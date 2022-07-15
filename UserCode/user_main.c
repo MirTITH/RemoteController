@@ -29,6 +29,8 @@ void user_main(void)
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
 
+	WTR_MAVLink_Init(&huart1, MAVLINK_COMM_0);
+
 	uint8_t Button[8] = {0};
 
 	while (true)
